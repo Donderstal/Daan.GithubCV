@@ -1,0 +1,115 @@
+html {
+    overflow-y: scroll;
+}
+
+@font-face {
+    font-family: mononoki;
+    src: url("./../fonts/mononoki-Regular.ttf")
+}
+
+body {
+    background-image: url("../img/background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: bottom right;
+    font-family: mononoki, monospace;
+    font-weight: 500;
+    color: hsl(0, 0%, 17%);
+}
+
+.body-content {
+    padding: 20px;
+}
+
+.info {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.info > h2 {
+    color: hsl(0, 0%, 35%);
+}
+
+.body {
+    margin-top: 25px;
+    position: relative;
+}
+
+.tabs {
+    padding: 0px;
+}
+
+.tab {
+    display: inline-block;
+    background: white;
+    padding: 10px;
+    border-radius: 5px 5px 0px 0px;
+    border-bottom: 1px solid lightgray;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.tab:hover {
+    background: lightgray;
+}
+
+.tab.active {
+    cursor: default;
+    border-bottom: 1px solid white;
+}
+
+.tab.active:hover {
+    background: white;
+}
+
+.sidebar {
+    background: white;
+    position: fixed;
+}
+
+.sidebar > ul > li.active {
+    font-weight: 800;
+}
+
+.display {
+    background: white;
+    margin-bottom: 25px;
+    padding: 25px;
+}
+
+.body-content {
+    display: none;
+    opacity: 0;
+}
+
+.progress {
+    height: 35px;
+}
+
+.progress-label {
+    display: flex;
+    margin-left: 5px;
+    align-items: center;
+    text-align: left;
+    height: 100%;
+    font-weight: bold;
+}
+
+.portfolio {
+    display: none;
+}
+
+.repo {
+    margin-bottom: 25px;
+}
+
+.repo:after {
+    content: "";
+    display: block;
+    margin: 0 auto; 
+    margin-left: 50px;
+    width: 50%;
+    padding-top: 20px; 
+    border-bottom: 1px solid lightgrey;
+}
