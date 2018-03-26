@@ -23,7 +23,7 @@ body {
 
 #RaLinks {
     z-index: -1;
-    width: 35%;
+    width: 25%;
     position: absolute;
     max-width: 100%;
     height: auto;
@@ -33,7 +33,7 @@ body {
 
 #RaRechts {
     z-index: -1;
-    width: 35%;
+    width: 25%;
     position: absolute;
     max-width: 100%;
     height: auto;
@@ -51,6 +51,10 @@ body {
 
 /* Opmaak containers (algemeen) */
 
+.main-container {
+    width: 100%
+}
+
 .btn-dark {
     display: block;
     margin-top: 30px;
@@ -61,12 +65,19 @@ body {
 }
 
 .container {
+/*     background-image: url("../img/text.jpg"); */
     border-radius: 25px;
     display: block;
     margin-top: 30px;
     margin-bottom: 30px;
-    width: 300px;
+    width: 600px;
     height: auto;
     background-color: #DD311B ;
     color: black;
 }
+
+    
+
+
+/* Opmaak containers (specifiek */
+
