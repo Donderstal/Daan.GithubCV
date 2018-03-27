@@ -27,7 +27,6 @@ body {
     z-index: -1;
     width: 25%;
     position: absolute;
-    max-width: 100%;
     height: auto;
     top: 150px;
     left: 0px;
@@ -37,7 +36,6 @@ body {
     z-index: -1;
     width: 25%;
     position: absolute;
-    max-width: 100%;
     height: auto;
     top: 150px;
     right: 0px;
@@ -47,14 +45,42 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-width: 100%;
+    width: 150px;
+    height: auto;
+    transition: width 2s;
+}
+
+#Kheper:hover {
+    width: 300px;
+}
+
+#HoLinks {
+    float: left;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: auto;
+}
+
+#HoRechts {
+    float: right;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
     height: auto;
 }
 
 /* Opmaak containers (algemeen) */
 
 .main-container {
-    width: 100%
+    width: 100%;
+    visibility: hidden;
+}
+
+.column {
+    visibility: hidden;
 }
 
 .btn-dark {
@@ -67,7 +93,6 @@ body {
 }
 
 .container {
-
     border-radius: 25px;
     border: black;
     border-width: 3px;
@@ -76,9 +101,12 @@ body {
     margin-bottom: 30px;
     width: 600px;
     height: auto;
-    background-color: #DD311B ;
+    background-color: #DD311B;
+    opacity: 0.9;
     color: black;
 }
 
 /* Opmaak containers (specifiek */
+
+
 

@@ -10,6 +10,8 @@
       //\\ Categorie C // EVENT LISTENERS //
           // C-I \\   // Informatie-knoppen
 
+      //\\ Categorie D // IMAGE EVENTS //
+
 //\\ Categorie A// ARRAYS & OBJECTEN //
 let btnList = ["About", "Experience", "Core Qualities", "Education", "Certificates", "Skills", "Interests", "Profiles", "Contact"]
 
@@ -20,7 +22,7 @@ let objectAbout = {
 
 let objectExperience = {
   visibility: false,
-  text: "Communications intern at the Shared Cultural Heritage Programme of the Cultural Heritage Agency <br> <br> <p align='right'> in Amersfoort (2017)</p> <br> Guide and Segway instructor at Bestdam Segway Tours & iGo Segway Events <br> <br> <p align='right'> in Amsterdam (2015 - 2017)</p> <br> Online Editor at Nederlands Genootschap at Nieuwsgriekse Studies <br> <br> <p align='right'> in Amsterdam (2015)</p> <br> History teacher internship at Walterbosch College  <br> <br> <p align='right'> in Apeldoorn (2012)</p> <br> Hygiëne-coordinator at Van Otten AGF  <br> <br> <p align='right'> in Apeldoorn (2011 - 2013)</p>"
+  text: "IT Traineeship at Embrace IT<br> <br> <p align='right'> in Gouda (2018)</p> <br> <br> Communications intern at the Shared Cultural Heritage Programme of the Cultural Heritage Agency <br> <br> <p align='right'> in Amersfoort (2017)</p> <br> Guide and Segway instructor at Bestdam Segway Tours & iGo Segway Events <br> <br> <p align='right'> in Amsterdam (2015 - 2017)</p> <br> Online Editor at Nederlands Genootschap at Nieuwsgriekse Studies <br> <br> <p align='right'> in Amsterdam (2015)</p> <br> History teacher internship at Walterbosch College  <br> <br> <p align='right'> in Apeldoorn (2012)</p> <br> Hygiëne-coordinator at Van Otten AGF  <br> <br> <p align='right'> in Apeldoorn (2011 - 2013)</p>"
 }
 
 let objectCoreQualities= {
@@ -204,4 +206,15 @@ btnProfiles.addEventListener("click", function() {
 
 btnContact.addEventListener("click", function() {
   btnClicker(objectContact, textContact, btnContact, divContact)
+})
+
+//\\ Categorie D // IMAGE EVENTS //
+
+const Kheper = document.getElementById("Kheper")
+
+Kheper.addEventListener("click", function() {
+  const mainContainer = document.getElementsByClassName("main-container")[0]
+  const raColumn = document.getElementsByClassName("column")[0]
+    mainContainer.style.visibility = "visible"
+    raColumn.style.visibility = "visible"
 })
