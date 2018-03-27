@@ -20,17 +20,17 @@ let objectAbout = {
 
 let objectExperience = {
   visibility: false,
-  text: "Guide and Segway instructor at Bestdam Segway Tours & iGo Segway Events <br> Communications intern at the Shared Cultural Heritage Programme of the Cultural Heritage Agency <br> Online Editor at Nederlands Genootschap at Nieuwsgriekse Studies (volunteer basis) <br> Hygiëne-coordinatore at Van Otten AGF <br> History teacher internship at Walterbosch college"
+  text: "Communications intern at the Shared Cultural Heritage Programme of the Cultural Heritage Agency <br> <br> <p align='right'> in Amersfoort (2017)</p> <br> Guide and Segway instructor at Bestdam Segway Tours & iGo Segway Events <br> <br> <p align='right'> in Amsterdam (2015 - 2017)</p> <br> Online Editor at Nederlands Genootschap at Nieuwsgriekse Studies <br> <br> <p align='right'> in Amsterdam (2015)</p> <br> History teacher internship at Walterbosch College  <br> <br> <p align='right'> in Apeldoorn (2012)</p> <br> Hygiëne-coordinator at Van Otten AGF  <br> <br> <p align='right'> in Apeldoorn (2011 - 2013)</p>"
 }
 
 let objectCoreQualities= {
   visibility: false,
-  text: "Sexy <br> Funny <br> Intelligent <br> VERY modest.",
+  text: "<p align=center>Sexy <br> Funny <br> Intelligent <br> VERY modest.<p>",
 }
 
 let objectEducation= {
   visibility: false,
-  text: "Gymnasium at Gymnasium Apeldoorn<br> <br> <p align='right'> in Apeldoorn (2004 - 2008)</p><br> Havo at Koninklijke Scholengemeenschap<br> <br> <p align='right'> in Apeldoorn (2008 - 2010)</p><br> Journalism at Windesheim University of Applied Sciences <br> <br> <p align='right'> in Zwolle (2010 - 2011)</p><br> History Teacher at Windesheim University of Applied Sciences <br> <br> <p align='right'> in Zwolle (2011 - 2012)</p><br> Bachelors in History at the University of Amsterdam <br> <br> <p align='right'> in Amsterdam (2013 - 2016)</p><br> Masters in Public History at the University of Amsterdam <br> <br> <p align='right'>in Amsterdam (2016 - 2018)</p>IT Traineeship at Embrace IT<br> <br> <p align='right'> in Gouda (2018)</p>"
+  text: "IT Traineeship at Embrace IT<br> <br> <p align='right'> in Gouda (2018)</p> <br>Masters in Public History at the University of Amsterdam <br> <br> <p align='right'>in Amsterdam (2016 - 2018)</p><br>Bachelors in History at the University of Amsterdam <br> <br> <p align='right'> in Amsterdam (2013 - 2016)</p><br> History Teacher at Windesheim University of Applied Sciences <br> <br> <p align='right'> in Zwolle (2011 - 2012)</p><br> Journalism at Windesheim University of Applied Sciences <br> <br> <p align='right'> in Zwolle (2010 - 2011)</p><br> HAVO at Koninklijke Scholengemeenschap<br> <br> <p align='right'> in Apeldoorn (2008 - 2010)</p><br> Gymnasium at Gymnasium Apeldoorn<br> <br> <p align='right'> in Apeldoorn (2004 - 2008)</p>"
 }
 
 let objectCertificates= {
@@ -45,7 +45,7 @@ let objectSkills= {
 
 let objectInterests= {
   visibility: false,
-  text: "I've always had a strong interest in ancient religions and cultures. I'm especially enthousiastic about Phoenician, Egyptian and Roman history. To add to the list, I also have a penchant for medieval Netherlandish history, as well as the Byzantine Empire. Oh, and let's not forget World War 1, the Soviet Union and Communist China! <br> Apart from history, I'm also quite passionate about music and enjoy playing bass-guitar in my band, Juicepack. Soons performing in a sleazy bar near YOU! In the sparse free time I have left, I like playing strategic video games and reading books.",
+  text: "I've always had a strong interest in ancient religions and cultures. I'm especially enthousiastic about Phoenician, Egyptian and Roman history. To add to the list, I also have a penchant for medieval Netherlandish history, as well as the Byzantine Empire. Oh, and let's not forget World War 1, the Soviet Union and Communist China! <br> Apart from history, I'm also quite passionate about music and enjoy playing bass-guitar in my band, Juicepack. Soon performing in a sleazy bar near YOU! In the sparse free time I have left, I like playing strategic video games and reading books.",
 }
 
 let objectProfiles= {
@@ -55,18 +55,19 @@ let objectProfiles= {
 
 let objectContact= {
   visibility: false,
-  text: "Telephone: 06-10546688 <br> Email: daanonderstal@hotmail.com",
+  text: "<p align=center>Telephone: 06-10546688 <br> Email: daanonderstal@hotmail.com<p>",
 }
 
 
 //\\ Categorie B// FUNCITES //
 
 // B-I \\ 
-// Creert divs voor knoppen en text
+// Creert divs voor knoppen en text adhv btnList
 function divCreater(btnList) {
   for (i = 0; i < btnList.length; i++) {
     let nwDiv = document.createElement('div')
     nwDiv.id = "div" + btnList[i]
+    nwDiv.className = "bigdiv"
     let Lctn = document.getElementsByClassName('main-container')[0]
     Lctn.appendChild(nwDiv)
   }
@@ -106,41 +107,62 @@ txtDivCreater(btnList)
 // Variabelen voor B-IV
 const btnAbout = document.getElementById("btnAbout")
 const textAbout = document.getElementById("textAbout")
+const divAbout = document.getElementById("divAbout")
 
 const btnExperience = document.getElementById("btnExperience")
 const textExperience = document.getElementById("textExperience")
+const divExperience = document.getElementById("divExperience")
 
 const btnCoreQualities = document.getElementById("btnCore Qualities")
 const textCoreQualities = document.getElementById("textCore Qualities")
+const divCoreQualities = document.getElementById("divCore Qualities")
 
 const btnEducation = document.getElementById("btnEducation")
 const textEducation = document.getElementById("textEducation")
+const divEducation = document.getElementById("divEducation")
 
 const btnCertificates = document.getElementById("btnCertificates")
 const textCertificates = document.getElementById("textCertificates")
+const divCertificates = document.getElementById("divCertificates")
 
 const btnSkills = document.getElementById("btnSkills")
 const textSkills = document.getElementById("textSkills")
+const divSkills = document.getElementById("divSkills")
 
 const btnInterests = document.getElementById("btnInterests")
 const textInterests = document.getElementById("textInterests")
+const divInterests = document.getElementById("divInterests")
 
 const btnProfiles = document.getElementById("btnProfiles")
 const textProfiles = document.getElementById("textProfiles")
+const divProfiles = document.getElementById("divProfiles")
 
 const btnContact = document.getElementById("btnContact")
 const textContact = document.getElementById("textContact")
+const divContact = document.getElementById("divContact")
 
 // B-IV \\ 
 // Generieke knop-klikker functie
-function btnClicker(object, location) {
+function btnClicker(object, location, button, relocation) {
   if (object.visibility === false) {
     location.innerHTML = object.text
     object.visibility = true
+    location.appendChild(button)
+    let btns = document.getElementsByClassName("btn btn-dark")
+      for (i = 0; i < btns.length; ++i) {
+        btns[i].style.display = "none"
+        button.style.display = "block"
+    }
   }
   else {
     location.innerHTML =  ""
     object.visibility = false
+    relocation.appendChild(button)
+    relocation.insertBefore(button, relocation.childNodes[0])
+    let btns = document.getElementsByClassName("btn btn-dark")
+    for (i = 0; i < btns.length; ++i) {
+      btns[i].style.display = "block"
+    }
   }
 }
 
@@ -149,37 +171,37 @@ function btnClicker(object, location) {
 // C-I \\ 
 // Informatie-knoppen
 btnAbout.addEventListener("click", function() {
-  btnClicker(objectAbout, textAbout)
+  btnClicker(objectAbout, textAbout, btnAbout, divAbout)
 })
 
 btnExperience.addEventListener("click", function() {
-  btnClicker(objectExperience, textExperience)
+  btnClicker(objectExperience, textExperience, btnExperience, divExperience)
 })
 
 btnCoreQualities.addEventListener("click", function() {
-  btnClicker(objectCoreQualities, textCoreQualities)
+  btnClicker(objectCoreQualities, textCoreQualities, btnCoreQualities, divCoreQualities)
 })
 
 btnEducation.addEventListener("click", function() {
-  btnClicker(objectEducation, textEducation)
+  btnClicker(objectEducation, textEducation, btnEducation, divEducation)
 })
 
 btnCertificates.addEventListener("click", function() {
-  btnClicker(objectCertificates, textCertificates)
+  btnClicker(objectCertificates, textCertificates, btnCertificates, divCertificates)
 })
 
 btnSkills.addEventListener("click", function() {
-  btnClicker(objectSkills, textSkills)
+  btnClicker(objectSkills, textSkills, btnSkills, divSkills)
 })
 
 btnInterests.addEventListener("click", function() {
-  btnClicker(objectInterests, textInterests)
+  btnClicker(objectInterests, textInterests, btnInterests, divInterests)
 })
 
 btnProfiles.addEventListener("click", function() {
-  btnClicker(objectProfiles, textProfiles)
+  btnClicker(objectProfiles, textProfiles, btnProfiles, divProfiles)
 })
 
 btnContact.addEventListener("click", function() {
-  btnClicker(objectContact, textContact)
+  btnClicker(objectContact, textContact, btnContact, divContact)
 })

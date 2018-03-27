@@ -8,6 +8,8 @@ body {
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
+    background-color: hsla(0,0%,100%,0.40);
+    background-blend-mode: overlay;
     font-family: mononoki, monospace;
     font-weight: 500;
     color: hsl(0, 0%, 17%);
@@ -65,8 +67,10 @@ body {
 }
 
 .container {
-/*     background-image: url("../img/text.jpg"); */
+
     border-radius: 25px;
+    border: black;
+    border-width: 3px;
     display: block;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -75,9 +79,6 @@ body {
     background-color: #DD311B ;
     color: black;
 }
-
-    
-
 
 /* Opmaak containers (specifiek */
 
