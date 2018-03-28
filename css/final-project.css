@@ -1,3 +1,13 @@
+/* ----INHOUDSOPGAVE ---- */
+/* A / Opmaak algemeen */
+/* B / Opmaak afbeeldingen */
+/* C / Opmaak containers*/
+/* D / Animatie keyframes */
+/* E / Media Queries */
+
+
+
+/* A / Opmaak algemeen */
 html {
     overflow-y: scroll;
 }
@@ -21,7 +31,7 @@ body {
     padding: 0 4px;
 }
 
-/* Opmaak afbeeldingen */
+/* B / Opmaak afbeeldingen */
 
 #RaLinks {
     z-index: -1;
@@ -30,6 +40,15 @@ body {
     height: auto;
     top: 150px;
     left: 0px;
+    transition: transform 1s;
+}
+
+.KlikRaLinks{
+    transform: rotate(20deg);
+}
+
+.AniRaLinks {
+    animation: LinkseRa 2s  normal ease-out;
 }
 
 #RaRechts {
@@ -39,13 +58,23 @@ body {
     height: auto;
     top: 150px;
     right: 0px;
+    transition: transform 1s;
+}
+
+.AniRaRechts {
+    animation: RechtseRa 2s  normal ease-out;
+}
+
+.KlikRaRechts {
+    transform: rotate(-20deg);
 }
 
 #Kheper {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 150px;
+    margin-bottom: 10px;
+    width: 100px;
     height: auto;
     transition: width 2s;
 }
@@ -72,7 +101,20 @@ body {
     height: auto;
 }
 
-/* Opmaak containers (algemeen) */
+#LinkedInLogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: auto;
+}
+
+.logo {
+    width: auto;
+    height: 24px;
+}
+
+/* C / Opmaak containers*/
 
 .main-container {
     width: 100%;
@@ -97,8 +139,6 @@ body {
     border: black;
     border-width: 3px;
     display: block;
-    margin-top: 30px;
-    margin-bottom: 30px;
     width: 600px;
     height: auto;
     background-color: #DD311B;
@@ -106,7 +146,35 @@ body {
     color: black;
 }
 
-/* Opmaak containers (specifiek */
+/* D / Animatie keyframes */
 
+@keyframes RechtseRa {
+    0% {
+        right:-300px;
+    }
+    100% {
+        right: 0px;
+    }
+}
 
+@keyframes LinkseRa {
+    0% {
+        left:-300px;
+    }
+    100% {
+        left: 0px;
+    }
+}
 
+/* E / Media Queries */
+@media only screen and (max-width: 600px) {
+    #HoRechts {
+        display: none;
+    }
+    #HoLinks {
+        display: none;
+    }
+    .container {
+        width: 300px;
+    }
+}
