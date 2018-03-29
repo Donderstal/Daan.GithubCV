@@ -16,56 +16,61 @@
 
 //\\A// ARRAYS & OBJECTEN //
 
-let btnList = ["About", "Experience", "Core Qualities", "Education", "Certificates", "Skills", "Interests", "Profiles", "Contact", "Github Repositories"]
+const btnList = ["About", "Experience", "Core Qualities", "Education", "Certificates", "Skills", "Interests", "Profiles", "Contact", "Github Repositories", "Credits"]
 
-let objectAbout = {
+const objectAbout = {
   visibility: false,
   text: "<br>Greetings internet traveller, and welcome to my online resume. My name is Daan Onderstal and I could be your next front end developer. ",
 }
 
-let objectExperience = {
+const objectExperience = {
   visibility: false,
-  text: "<br>IT Traineeship at <b>Embrace IT</b><br> <br> <p align='right'> <i>in Gouda (2018)</i></p> <br> <br> Communications intern at the Shared Cultural Heritage Programme of the <b>Cultural Heritage Agency</b> <br> <br> <p align='right'> <i>in Amersfoort (2017)</i></p> <br> Guide and Segway instructor at <b>Bestdam Segway Tours & iGo Segway Events </b><br> <br> <p align='right'> <i>in Amsterdam (2015 - 2017)</i></p> <br> Online Editor at <b>Nederlands Genootschap at Nieuwsgriekse Studies </b><br> <br> <p align='right'> <i>in Amsterdam (2015)</i></p> <br> History teacher internship at <b>Walterbosch College </b> <br> <br> <p align='right'><i> in Apeldoorn (2012)</i></p> <br> Hygiëne-coordinator at <b>Van Otten AGF</b>  <br> <br> <p align='right'> <i>in Apeldoorn (2011 - 2013)</i></p>"
+  text: "<br>IT Traineeship at <b>Embrace IT</b><br> <br> <p align='right'> <i>in Gouda (2018)</i></p> <br> <br> Communications intern at the Shared Cultural Heritage Programme of the <b>Cultural Heritage Agency</b> <br> <br> <p align='right'> <i>in Amersfoort (2017)</i></p> <br> Guide and Segway instructor at <b>Bestdam Segway Tours & iGo Segway Events </b><br> <br> <p align='right'> <i>in Amsterdam (2015 - 2017)</i></p> <br> Online Editor at <b>Nederlands Genootschap van Nieuwsgriekse Studies </b><br> <br> <p align='right'> <i>in Amsterdam (2015)</i></p> <br> History teacher internship at <b>Walterbosch College </b> <br> <br> <p align='right'><i> in Apeldoorn (2012)</i></p> <br> Hygiëne-coordinator at <b>Van Otten AGF</b>  <br> <br> <p align='right'> <i>in Apeldoorn (2011 - 2013)</i></p>"
 }
 
-let objectCoreQualities= {
+const objectCoreQualities= {
   visibility: false,
-  text: "<br><p align=center>Enthousiastic<br><br>Hard working<br><br>Enjoys a challenge<br><br>VERY modest.<p>",
+  text: "<br><p align=center>Enthousiastic<br><br>Hard working<br><br>Enjoys a challenge<br><br>Helpful<br><p>",
 }
 
-let objectEducation= {
+const objectEducation= {
   visibility: false,
   text: "<br>IT Traineeship at <b>Embrace IT</b><br> <br> <p align='right'><i> in Gouda (2018)</i></p> <br>Masters in Public History at the <b>University of Amsterdam</b> <br> <br> <p align='right'><i>in Amsterdam (2016 - 2018)</i></p><br>Bachelors in History at the <b>University of Amsterdam </b><br> <br> <p align='right'> <i>in Amsterdam (2013 - 2016)</i></p><br> History Teacher at <b>Windesheim University of Applied Sciences</b> <br> <br> <p align='right'><i> in Zwolle (2011 - 2012)</i></p><br> Journalism at <b>Windesheim University of Applied Sciences</b> <br> <br> <p align='right'><i> in Zwolle (2010 - 2011)</i></p><br> HAVO at <b>Koninklijke Scholengemeenschap</b><br> <br> <p align='right'><i> in Apeldoorn (2008 - 2010)</i></p><br> Gymnasium at <b>Gymnasium Apeldoorn</b><br> <br> <p align='right'><i> in Apeldoorn (2004 - 2008)</i></p>"
 }
 
-let objectCertificates= {
+const objectCertificates= {
   visibility: false,
-  text: "<div align='center'><br> <b><em>Programming</em></b> <br>  <br> <div> <img src= ../img/icons/HTMLlogo.png class='logo'> <br> W3Schools HTML Certificate </div> <br> <div> <img src= ../img/icons/CSSlogo.png class='logo'> <br>W3Schools CSS Certificate </div> <br> <div> <img src= ../img/icons/JSlogo.png class='logo'> <br> W3Schools Javascript Certificate  </div> <br> <div> <img src= ../img/icons/JSlogo.png class='logo'> <br> W3Schools jQuery Certificate  </div> <br><br><b><em>Other</em></b>  <br> <div> <img src= ../img/icons/JSlogo.png class='logo'> <br> SCRUM Certificate  </div>  <br> <div> <img src= ../img/icons/JSlogo.png class='logo'> <br> TMAP Certificate  </div> </div>",
+  text: "<div align='center'><br> <b><em>Programming</em></b> <br>  <br> <div> <img src= ../img/icons/HTMLlogo.png class='logo'> <br> W3Schools HTML Certificate </div> <br> <div> <img src= ../img/icons/CSSlogo.png class='logo'> <br>W3Schools CSS Certificate </div> <br> <div> <img src= ../img/icons/JSlogo.png class='logo'> <br> W3Schools Javascript Certificate  </div> <br> <div> <img src= ../img/icons/JSlogo.png class='logo'> <br> W3Schools jQuery Certificate  </div> <br><br><b><em>Other</em></b>  <br> <div><br> SCRUM Certificate  </div>  <br> <div><br> TMAP Certificate  </div> </div>",
 }
 
-let objectSkills= {
+const objectSkills= {
   visibility: false,
   text: "<div align='center'><br> <b><em>Languages</em></b> <br> <br> <div> <img src= ../img/icons/if_flag-the-netherlands_748017.png> <br> Native speaker </div> <br> <div><img src= ../img/icons/if_flag-united-kingdom_748024.png> <br>Excellent </div> <br> <div> <img src= ../img/icons/if_flag-germany_748067.png> <br>Intermediate </div> <br> <div> <img src= ../img/icons/if_flag-russia2x_748044.png> <br>Beginner <br> (Это трудно!) </div> <div align='center'><br> <b><em>Programming</em></b> <br>  <br> <div> <img src= ../img/icons/HTMLlogo.png class='logo'> <br>Intermediate </div> <br> <div> <img src= ../img/icons/CSSlogo.png class='logo'> <br>Intermediate </div> <br> <div> <img src= ../img/icons/JSlogo.png class='logo'> <br>Beginner </div> </div>" ,
 }
 
-let objectInterests= {
+const objectInterests= {
   visibility: false,
   text: "<br>I've always had a strong interest in ancient religions and cultures. I'm especially enthousiastic about Phoenician, Egyptian and Roman history. To add to the list, I also have a penchant for medieval Netherlandish history, as well as the Byzantine Empire. Oh, and let's not forget World War 1, the Soviet Union and Communist China! <br> </br> Apart from history and politics, I'm also quite passionate about music and enjoy playing bass-guitar in my band, Juicepack. Soon performing in a sleazy bar near YOU! In the sparse free time I have left, I like playing strategic video games and reading books.",
 }
 
-let objectProfiles= {
+const objectProfiles= {
   visibility: false,
   text: "<br><p><a href='https://www.linkedin.com/in/daan-onderstal-37364a15b/'><img src=../img/linkedin-logo.png class='center' id='LinkedInLogo'></p>",
 }
 
-let objectContact= {
+const objectContact= {
   visibility: false,
   text: "<br><p align=center>Telephone:<br> 06-10546688 <br> <br>Email: <br>daanonderstal@hotmail.com<p>",
 }
 
-let objectGithubRepositories= {
+const objectGithubRepositories= {
   visibility: false,
   text: "",
+}
+
+const objectCredits= {
+  visibility: false,
+  text: "<br>Embrace IT logo as designed by <b>hummandc</b> <br> <br> Egyptian symbols made by <a href='https://en.wikipedia.org/wiki/User:Jeff_Dahl?rdfrom=commons:User:Jeff_Dahl'><b> Jeff Dahl </b></a> <br> <br> Background image retrieved from <a href='https://www.fluentin3months.com/siwa/'><b>fluentin3months.com</b><a>",
 }
 
 //\\B// FUNCITES //
@@ -286,6 +291,10 @@ btnProfiles.addEventListener("click", function() {
 
 btnContact.addEventListener("click", function() {
   btnClicker(objectContact, btnContact, divContact)
+})
+
+btnCredits.addEventListener("click", function() {
+  btnClicker(objectCredits, btnCredits, divCredits)
 })
 
 btnGithubRepositories.addEventListener("click", function() {
