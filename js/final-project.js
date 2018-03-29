@@ -7,7 +7,8 @@
           // B-III \\  // Creert divs adhv btnList
           // B-IV \\   // Generieke knop-klikker functie
           // B-V \\    // Github API functie
-          // B-VI \\   // Functie/event listener voor Kheper
+          // B-VI \\   // Github knop functie
+          // B-VII \\  // Functie/event listener voor Kheper
 
       //\\C// EVENT LISTENERS //
           // C-I \\   // Informatie-knoppen
@@ -24,7 +25,7 @@ let objectAbout = {
 
 let objectExperience = {
   visibility: false,
-  text: "<br>IT Traineeship at Embrace IT<br> <br> <p align='right'> in Gouda (2018)</p> <br> <br> Communications intern at the Shared Cultural Heritage Programme of the Cultural Heritage Agency <br> <br> <p align='right'> in Amersfoort (2017)</p> <br> Guide and Segway instructor at Bestdam Segway Tours & iGo Segway Events <br> <br> <p align='right'> in Amsterdam (2015 - 2017)</p> <br> Online Editor at Nederlands Genootschap at Nieuwsgriekse Studies <br> <br> <p align='right'> in Amsterdam (2015)</p> <br> History teacher internship at Walterbosch College  <br> <br> <p align='right'> in Apeldoorn (2012)</p> <br> Hygiëne-coordinator at Van Otten AGF  <br> <br> <p align='right'> in Apeldoorn (2011 - 2013)</p>"
+  text: "<br>IT Traineeship at <b>Embrace IT</b><br> <br> <p align='right'> <i>in Gouda (2018)</i></p> <br> <br> Communications intern at the Shared Cultural Heritage Programme of the <b>Cultural Heritage Agency</b> <br> <br> <p align='right'> <i>in Amersfoort (2017)</i></p> <br> Guide and Segway instructor at <b>Bestdam Segway Tours & iGo Segway Events </b><br> <br> <p align='right'> <i>in Amsterdam (2015 - 2017)</i></p> <br> Online Editor at <b>Nederlands Genootschap at Nieuwsgriekse Studies </b><br> <br> <p align='right'> <i>in Amsterdam (2015)</i></p> <br> History teacher internship at <b>Walterbosch College </b> <br> <br> <p align='right'><i> in Apeldoorn (2012)</i></p> <br> Hygiëne-coordinator at <b>Van Otten AGF</b>  <br> <br> <p align='right'> <i>in Apeldoorn (2011 - 2013)</i></p>"
 }
 
 let objectCoreQualities= {
@@ -34,7 +35,7 @@ let objectCoreQualities= {
 
 let objectEducation= {
   visibility: false,
-  text: "<br>IT Traineeship at Embrace IT<br> <br> <p align='right'> in Gouda (2018)</p> <br>Masters in Public History at the University of Amsterdam <br> <br> <p align='right'>in Amsterdam (2016 - 2018)</p><br>Bachelors in History at the University of Amsterdam <br> <br> <p align='right'> in Amsterdam (2013 - 2016)</p><br> History Teacher at Windesheim University of Applied Sciences <br> <br> <p align='right'> in Zwolle (2011 - 2012)</p><br> Journalism at Windesheim University of Applied Sciences <br> <br> <p align='right'> in Zwolle (2010 - 2011)</p><br> HAVO at Koninklijke Scholengemeenschap<br> <br> <p align='right'> in Apeldoorn (2008 - 2010)</p><br> Gymnasium at Gymnasium Apeldoorn<br> <br> <p align='right'> in Apeldoorn (2004 - 2008)</p>"
+  text: "<br>IT Traineeship at <b>Embrace IT</b><br> <br> <p align='right'><i> in Gouda (2018)</i></p> <br>Masters in Public History at the <b>University of Amsterdam</b> <br> <br> <p align='right'><i>in Amsterdam (2016 - 2018)</i></p><br>Bachelors in History at the <b>University of Amsterdam </b><br> <br> <p align='right'> <i>in Amsterdam (2013 - 2016)</i></p><br> History Teacher at <b>Windesheim University of Applied Sciences</b> <br> <br> <p align='right'><i> in Zwolle (2011 - 2012)</i></p><br> Journalism at <b>Windesheim University of Applied Sciences</b> <br> <br> <p align='right'><i> in Zwolle (2010 - 2011)</i></p><br> HAVO at <b>Koninklijke Scholengemeenschap</b><br> <br> <p align='right'><i> in Apeldoorn (2008 - 2010)</i></p><br> Gymnasium at <b>Gymnasium Apeldoorn</b><br> <br> <p align='right'><i> in Apeldoorn (2004 - 2008)</i></p>"
 }
 
 let objectCertificates= {
@@ -150,6 +151,7 @@ function btnClicker(object, button, relocation) {
     textAbout.innerHTML = object.text
     object.visibility = true
     textAbout.appendChild(button)
+    mainContainer.classList.add("AniFadeIn")
     raLinks.classList.add("KlikRaLinks")
     raRechts.classList.add("KlikRaRechts")
     let btns = document.getElementsByClassName("btn btn-dark")
@@ -166,6 +168,7 @@ function btnClicker(object, button, relocation) {
     let btns = document.getElementsByClassName("btn btn-dark")
     raLinks.classList.remove("KlikRaLinks")
     raRechts.classList.remove("KlikRaRechts")
+    mainContainer.classList.remove("AniFadeIn")
     for (i = 0; i < btns.length; ++i) {
       btns[i].style.display = "block"
     }
@@ -182,20 +185,24 @@ fetch("https://api.github.com/users/Donderstal/repos")
       for (let repo of repositories) {
         const p = document.createElement("p")
         p.className = "GitHub"
-        p.innerHTML = '<b>Repo name:</b> <a href=' + repo.html_url + '>' + repo.name + '<br>'
+        p.innerHTML = '<br><b>Repo name:</b> <a href=' + repo.html_url + '>' + repo.name + '<br>'
         p.innerHTML += ' <b>Description:</b> ' + repo.description + '<br>' 
-        p.innerHTML += ' <b>Language(s):</b> ' + repo.language + '<br> <br>'
+        p.innerHTML += ' <b>Language(s):</b> ' + repo.language + '<br>'
         repoDiv.appendChild(p)
       }
       repoDiv.style.display = "none"        
     })
 
+
+// B-VI \\ 
+// Github knop functie
 function btnClickerGit(object, button, relocation) {
     if (object.visibility === false) {
       object.visibility = true
       textGithubRepositories = document.getElementById("textGithub Repositories")
       textGithubRepositories.style.display = "block"
       textGithubRepositories.appendChild(button)
+      mainContainer.classList.add("AniFadeIn")
       raLinks.classList.add("KlikRaLinks")
       raRechts.classList.add("KlikRaRechts")
       let btns = document.getElementsByClassName("btn btn-dark")
@@ -212,25 +219,27 @@ function btnClickerGit(object, button, relocation) {
       let btns = document.getElementsByClassName("btn btn-dark")
       raLinks.classList.remove("KlikRaLinks")
       raRechts.classList.remove("KlikRaRechts")
+      mainContainer.classList.remove("AniFadeIn")
       for (i = 0; i < btns.length; ++i) {
         btns[i].style.display = "block"
       }
     }
   }
 
-// Variabelen voor B-VI \\
+// Variabelen voor B-VII \\
 const Kheper = document.getElementById("Kheper")
 const raRechts = document.getElementById("RaRechts")
 const raLinks = document.getElementById("RaLinks")
 const logoLinks = document.getElementById("LeftLogo2")
 const logoRechts = document.getElementById("RightLogo2")
+const mainContainer = document.getElementsByClassName("main-container")[0]
+const raColumn = document.getElementsByClassName("column")[0]
 
-// B-VI \\
+// B-VII \\
 // Functie/event listener voor Kheper
 Kheper.addEventListener("click", function() {
-  const mainContainer = document.getElementsByClassName("main-container")[0]
-  const raColumn = document.getElementsByClassName("column")[0]
-    mainContainer.style.visibility = "visible"
+      mainContainer.style.visibility = "visible"
+      mainContainer.classList.add("AniButtonIn")
     raColumn.style.visibility = "visible"
       raLinks.classList.add("AniRaLinks")
       raRechts.classList.add("AniRaRechts")

@@ -170,6 +170,14 @@ div[id = "textGithub Repositories"] {
 
 /* D / Animatie klasses */
 
+.AniButtonIn {
+    animation: fadeButtonsIn 2s  normal ease-out;
+}
+
+.AniFadeIn {
+    animation: fadeIn 1s  normal ease-out;
+}
+
 .AniRaRechts {
     animation: RechtseRa 3s  normal ease-out;
 }
@@ -234,6 +242,23 @@ div[id = "textGithub Repositories"] {
     }
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+ } 
+
+ @keyframes fadeButtonsIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+ } 
 
 /* F / Media Queries */
 @media only screen and (max-width: 600px) {
@@ -260,5 +285,8 @@ div[id = "textGithub Repositories"] {
     } 
        #Kheper:hover {
         width: 200px;
+    }
+    .container {
+        width: 400px;
     }
 }
