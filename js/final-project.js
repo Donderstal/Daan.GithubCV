@@ -40,12 +40,12 @@ const objectEducation= {
 
 const objectCertificates= {
   visibility: false,
-  text: "<div align='center'><br> <b><em>Programming</em></b> <br>  <br> <div> <img src= ../img/icons/HTMLlogo.png class='logo'> <br> W3Schools HTML Certificate </div> <br> <div> <img src= ../img/icons/CSSlogo.png class='logo'> <br>W3Schools CSS Certificate </div> <br> <div> <img src= ../img/icons/JSlogo.png class='logo'> <br> W3Schools Javascript Certificate  </div> <br> <div> <img src= ../img/icons/JSlogo.png class='logo'> <br> W3Schools jQuery Certificate  </div> <br><br><b><em>Other</em></b>  <br> <div><br> SCRUM Certificate  </div>  <br> <div><br> TMAP Certificate  </div> </div>",
+  text: "<div align='center'><br> <b><em>Programming</em></b> <br>  <br> <div> <img src= ./img/icons/HTMLlogo.png class='logo'> <br> W3Schools HTML Certificate </div> <br> <div> <img src= ./img/icons/CSSlogo.png class='logo'> <br>W3Schools CSS Certificate </div> <br> <div> <img src= ./img/icons/JSlogo.png class='logo'> <br> W3Schools Javascript Certificate  </div> <br> <div> <img src= ./img/icons/JSlogo.png class='logo'> <br> W3Schools jQuery Certificate  </div> <br><br><b><em>Other</em></b>  <br> <div><br> SCRUM Certificate  </div>  <br> <div><br> TMAP Certificate  </div> </div>",
 }
 
 const objectSkills= {
   visibility: false,
-  text: "<div align='center'><br> <b><em>Languages</em></b> <br> <br> <div> <img src= ../img/icons/if_flag-the-netherlands_748017.png> <br> Native speaker </div> <br> <div><img src= ../img/icons/if_flag-united-kingdom_748024.png> <br>Excellent </div> <br> <div> <img src= ../img/icons/if_flag-germany_748067.png> <br>Intermediate </div> <br> <div> <img src= ../img/icons/if_flag-russia2x_748044.png> <br>Beginner <br> (Это трудно!) </div> <div align='center'><br> <b><em>Programming</em></b> <br>  <br> <div> <img src= ../img/icons/HTMLlogo.png class='logo'> <br>Intermediate </div> <br> <div> <img src= ../img/icons/CSSlogo.png class='logo'> <br>Intermediate </div> <br> <div> <img src= ../img/icons/JSlogo.png class='logo'> <br>Beginner </div> </div>" ,
+  text: "<div align='center'><br> <b><em>Languages</em></b> <br> <br> <div> <img src= ./img/icons/if_flag-the-netherlands_748017.png> <br> Native speaker </div> <br> <div><img src= ./img/icons/if_flag-united-kingdom_748024.png> <br>Excellent </div> <br> <div> <img src= ./img/icons/if_flag-germany_748067.png> <br>Intermediate </div> <br> <div> <img src= ./img/icons/if_flag-russia2x_748044.png> <br>Beginner <br> (Это трудно!) </div> <div align='center'><br> <b><em>Programming</em></b> <br>  <br> <div> <img src= ./img/icons/HTMLlogo.png class='logo'> <br>Intermediate </div> <br> <div> <img src= ./img/icons/CSSlogo.png class='logo'> <br>Intermediate </div> <br> <div> <img src= ./img/icons/JSlogo.png class='logo'> <br>Beginner </div> </div>" ,
 }
 
 const objectInterests= {
