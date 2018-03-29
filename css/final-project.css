@@ -31,7 +31,41 @@ body {
     padding: 0 4px;
 }
 
+::-webkit-scrollbar { 
+    display: none; 
+}
+
 /* B / Opmaak afbeeldingen */
+
+#LeftLogo {
+    z-index: -2;
+    float: left;
+    width: 100px;
+    height: 175px;
+}
+
+#RightLogo {
+    z-index: -2;
+    float: right;
+    width: 100px;
+    height: 175px;
+}
+
+#LeftLogo2 {
+    z-index: -2;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    transition: opacity 2s ease-in-out;
+}
+
+#RightLogo2 {
+    z-index: -2;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    transition: opacity 2s ease-in-out;
+}
 
 #RaLinks {
     z-index: -1;
@@ -43,14 +77,6 @@ body {
     transition: transform 1s;
 }
 
-.KlikRaLinks{
-    transform: rotate(20deg);
-}
-
-.AniRaLinks {
-    animation: LinkseRa 2s  normal ease-out;
-}
-
 #RaRechts {
     z-index: -1;
     width: 25%;
@@ -59,14 +85,6 @@ body {
     top: 150px;
     right: 0px;
     transition: transform 1s;
-}
-
-.AniRaRechts {
-    animation: RechtseRa 2s  normal ease-out;
-}
-
-.KlikRaRechts {
-    transform: rotate(-20deg);
 }
 
 #Kheper {
@@ -115,10 +133,10 @@ body {
 }
 
 /* C / Opmaak containers*/
-
 .main-container {
     width: 100%;
     visibility: hidden;
+    margin-bottom: 15px;
 }
 
 .column {
@@ -146,7 +164,39 @@ body {
     color: black;
 }
 
-/* D / Animatie keyframes */
+div[id = "textGithub Repositories"] {
+    text-align: center;
+}
+
+/* D / Animatie klasses */
+
+.AniRaRechts {
+    animation: RechtseRa 3s  normal ease-out;
+}
+
+.KlikRaRechts {
+    transform: rotate(-20deg);
+}
+
+.KlikRaLinks{
+    transform: rotate(20deg);
+}
+
+.AniRaLinks {
+    animation: LinkseRa 3s  normal ease-out;
+}
+
+.AniRightLogo {
+    animation: Logorechts 2s  normal ease-out;
+    opacity: 0;
+}
+
+.AniLeftLogo {
+    animation: Logolinks 2s  normal ease-out;
+    opacity: 0;
+}
+
+/* E / Animatie keyframes */
 
 @keyframes RechtseRa {
     0% {
@@ -166,15 +216,49 @@ body {
     }
 }
 
-/* E / Media Queries */
+@keyframes Logolinks {
+    0% {
+        right: 0px;
+    }
+    100% {
+        right:-500px;
+    }
+}
+
+@keyframes Logorechts {
+    0% {
+        left: 0px;
+    }
+    100% {
+        left:-500px;
+    }
+}
+
+
+/* F / Media Queries */
 @media only screen and (max-width: 600px) {
+    .container {
+        width: 300px;
+    }
+        #RightLogo {
+        display: none;
+    }
+    #LeftLogo {
+        display: none;
+    }
+    #Kheper:hover {
+        width: 100px;
+    }
+}
+
+@media only screen and (max-width: 744px) {
     #HoRechts {
         display: none;
     }
     #HoLinks {
         display: none;
-    }
-    .container {
-        width: 300px;
+    } 
+       #Kheper:hover {
+        width: 200px;
     }
 }

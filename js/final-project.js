@@ -19,7 +19,7 @@ let btnList = ["About", "Experience", "Core Qualities", "Education", "Certificat
 
 let objectAbout = {
   visibility: false,
-  text: "<br>Greetings internet traveller, and welcome to my resume. My name is Daan Onderstal and I could be your next front end developer. ",
+  text: "<br>Greetings internet traveller, and welcome to my online resume. My name is Daan Onderstal and I could be your next front end developer. ",
 }
 
 let objectExperience = {
@@ -29,7 +29,7 @@ let objectExperience = {
 
 let objectCoreQualities= {
   visibility: false,
-  text: "<br><p align=center>Sexy <br> Funny <br> Intelligent <br> VERY modest.<p>",
+  text: "<br><p align=center>Enthousiastic<br><br>Hard working<br><br>Enjoys a challenge<br><br>VERY modest.<p>",
 }
 
 let objectEducation= {
@@ -39,7 +39,7 @@ let objectEducation= {
 
 let objectCertificates= {
   visibility: false,
-  text: "Daan Onderstal lijkt soms een eikel, maar is eigenlijk een hele lieve jongen. Hij houdt van knuffelen en broodjes kroket. De legende gaat dat hij soms wat zinnigs te melden heeft, maar hier is nog geen onafhankelijk onderzoek naar gedaan.",
+  text: "<div align='center'><br> <b><em>Programming</em></b> <br>  <br> <div> <img src= ../img/icons/HTMLlogo.png class='logo'> <br> W3Schools HTML Certificate </div> <br> <div> <img src= ../img/icons/CSSlogo.png class='logo'> <br>W3Schools CSS Certificate </div> <br> <div> <img src= ../img/icons/JSlogo.png class='logo'> <br> W3Schools Javascript Certificate  </div> <br> <div> <img src= ../img/icons/JSlogo.png class='logo'> <br> W3Schools jQuery Certificate  </div> <br><br><b><em>Other</em></b>  <br> <div> <img src= ../img/icons/JSlogo.png class='logo'> <br> SCRUM Certificate  </div>  <br> <div> <img src= ../img/icons/JSlogo.png class='logo'> <br> TMAP Certificate  </div> </div>",
 }
 
 let objectSkills= {
@@ -59,7 +59,7 @@ let objectProfiles= {
 
 let objectContact= {
   visibility: false,
-  text: "<br><p align=center>Telephone:<br> 06-10546688 <br> Email: <br>daanonderstal@hotmail.com<p>",
+  text: "<br><p align=center>Telephone:<br> 06-10546688 <br> <br>Email: <br>daanonderstal@hotmail.com<p>",
 }
 
 let objectGithubRepositories= {
@@ -177,16 +177,53 @@ function btnClicker(object, button, relocation) {
 fetch("https://api.github.com/users/Donderstal/repos")
     .then(response => response.json())
     .then(repositories => {
-      const repoDiv = document.getElementById("divGithub Repositories")
+      const repoDiv = document.getElementById("textGithub Repositories")
+      
       for (let repo of repositories) {
-        objectGithubRepositories.text = repo.name
+        const p = document.createElement("p")
+        p.className = "GitHub"
+        p.innerHTML = '<b>Repo name:</b> <a href=' + repo.html_url + '>' + repo.name + '<br>'
+        p.innerHTML += ' <b>Description:</b> ' + repo.description + '<br>' 
+        p.innerHTML += ' <b>Language(s):</b> ' + repo.language + '<br> <br>'
+        repoDiv.appendChild(p)
       }
+      repoDiv.style.display = "none"        
     })
+
+function btnClickerGit(object, button, relocation) {
+    if (object.visibility === false) {
+      object.visibility = true
+      textGithubRepositories = document.getElementById("textGithub Repositories")
+      textGithubRepositories.style.display = "block"
+      textGithubRepositories.appendChild(button)
+      raLinks.classList.add("KlikRaLinks")
+      raRechts.classList.add("KlikRaRechts")
+      let btns = document.getElementsByClassName("btn btn-dark")
+        for (i = 0; i < btns.length; ++i) {
+          btns[i].style.display = "none"
+          button.style.display = "block"
+      }
+    }
+    else {
+      textGithubRepositories.style.display = "none"
+      object.visibility = false
+      relocation.appendChild(button)
+      relocation.insertBefore(button, relocation.childNodes[0])
+      let btns = document.getElementsByClassName("btn btn-dark")
+      raLinks.classList.remove("KlikRaLinks")
+      raRechts.classList.remove("KlikRaRechts")
+      for (i = 0; i < btns.length; ++i) {
+        btns[i].style.display = "block"
+      }
+    }
+  }
 
 // Variabelen voor B-VI \\
 const Kheper = document.getElementById("Kheper")
 const raRechts = document.getElementById("RaRechts")
 const raLinks = document.getElementById("RaLinks")
+const logoLinks = document.getElementById("LeftLogo2")
+const logoRechts = document.getElementById("RightLogo2")
 
 // B-VI \\
 // Functie/event listener voor Kheper
@@ -195,8 +232,10 @@ Kheper.addEventListener("click", function() {
   const raColumn = document.getElementsByClassName("column")[0]
     mainContainer.style.visibility = "visible"
     raColumn.style.visibility = "visible"
-    raLinks.classList.add("AniRaLinks")
-    raRechts.classList.add("AniRaRechts")
+      raLinks.classList.add("AniRaLinks")
+      raRechts.classList.add("AniRaRechts")
+      logoLinks.classList.add("AniLeftLogo")
+      logoRechts.classList.add("AniRightLogo")
 })
 
 
@@ -241,5 +280,5 @@ btnContact.addEventListener("click", function() {
 })
 
 btnGithubRepositories.addEventListener("click", function() {
-  btnClicker(objectGithubRepositories, btnGithubRepositories, divGithubRepositories)
+  btnClickerGit(objectGithubRepositories, btnGithubRepositories, divGithubRepositories)
 })
