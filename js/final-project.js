@@ -55,7 +55,7 @@ const objectInterests= {
 
 const objectProfiles= {
   visibility: false,
-  text: "<br><p><a href='https://www.linkedin.com/in/daan-onderstal-37364a15b/'><img src=../img/linkedin-logo.png class='center' id='LinkedInLogo'></p>",
+  text: "<br><p><a href='https://www.linkedin.com/in/daan-onderstal-37364a15b/'><img src=./img/linkedin-logo.png class='center' id='LinkedInLogo'></p>",
 }
 
 const objectContact= {
